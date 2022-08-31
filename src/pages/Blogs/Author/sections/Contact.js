@@ -24,7 +24,7 @@ import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
 // Images
-import bgImage from "../../../../assets/images/patron1.png";
+// import bgImage from "../../../../assets/images/patron1.png";
 
 function Contact() {
   return (
@@ -46,17 +46,20 @@ function Contact() {
                 lg={5}
                 position="relative"
                 px={0}
-                sx={{
-                  backgroundImage: ({
-                    palette: { gradients },
-                    functions: { rgba, linearGradient },
-                  }) =>
-                    `${linearGradient(
-                      rgba(gradients.primary.main, 0.8),
-                      rgba(gradients.primary.state, 0.8)
-                    )}, url(${bgImage})`,
-                  backgroundSize: "cover",
-                }}
+                backgroundColor="#2c8ea2"
+                sx={
+                  {
+                    // backgroundImage: ({
+                    //   palette: { gradients },
+                    //   functions: { rgba, linearGradient },
+                    // }) =>
+                    //   `${linearGradient(
+                    //     rgba(gradients.secondary.main, 0.8),
+                    //     rgba(gradients.secondary.state, 0.8)
+                    //   )}, url(${bgImage})`,
+                    // backgroundSize: "cover",
+                  }
+                }
               >
                 <MKBox
                   display="flex"
@@ -203,7 +206,7 @@ function Contact() {
                       textAlign="right"
                       ml="auto"
                     >
-                      <MKButton variant="gradient" color="secondary">
+                      <MKButton variant="gradient" color="error">
                         Send Message
                       </MKButton>
                     </Grid>

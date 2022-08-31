@@ -63,14 +63,22 @@ function Header() {
       <div
         style={{
           position: "absolute",
-          top: "30vh",
+          top: "10vh",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 1,
         }}
       >
         <Container>
-          <Card sx={{ ml: "18vw", mr: "18vw", p: "10px", display: "flex" }}>
+          <Card
+            sx={{
+              ml: "18vw",
+              mr: "18vw",
+              p: "10px",
+              display: "flex",
+              backgroundColor: "rgba(255,255,255,0.7)",
+            }}
+          >
             <DateInput />
           </Card>
         </Container>

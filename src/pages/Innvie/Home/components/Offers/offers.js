@@ -1,19 +1,18 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 import PropTypes from "prop-types";
+import { Container } from "@mui/material";
 
 function Offers({ cards }) {
   return (
-    <Card
+    <Container
       sx={{
         p: 2,
         mx: { xs: 2, lg: 3 },
-        mt: "-8vh",
+        mt: "2rem",
         mb: 10,
         zIndex: 1,
-        boxShadow: ({ boxShadows: { xxl } }) => xxl,
       }}
     >
       <Grid container spacing={2}>
@@ -34,7 +33,7 @@ function Offers({ cards }) {
           </Grid>
         ))}
       </Grid>
-    </Card>
+    </Container>
   );
 }
 

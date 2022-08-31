@@ -24,10 +24,11 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 // Otis Kit PRO themes
 import theme from "assets/theme";
-import Presentation from "layouts/pages/presentation";
+import Home from "pages/Innvie/Home";
 
 // Otis Kit PRO routes
 import routes from "routes";
+import img from "./assets/images/shapes/bg-tile1.svg";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -54,11 +55,18 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Routes>
-        {getRoutes(routes)}
-        <Route path="/presentation" element={<Presentation />} />
-        <Route path="*" element={<Navigate to="/presentation" />} />
-      </Routes>
+      <div
+        style={{
+          backgroundImage: `url(${img})`,
+          backgroundSize: "100px auto",
+        }}
+      >
+        <Routes>
+          {getRoutes(routes)}
+          <Route path="/innvie/home" element={<Home />} />
+          <Route path="*" element={<Navigate to="/innvie/home" />} />
+        </Routes>
+      </div>
     </ThemeProvider>
   );
 }

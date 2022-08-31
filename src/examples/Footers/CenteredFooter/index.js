@@ -32,7 +32,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-function CenteredFooter({ company, links, socials, light }) {
+function CenteredFooter({ company, links, socials }) {
   const { href, name } = company;
 
   const year = new Date().getFullYear();
@@ -46,7 +46,7 @@ function CenteredFooter({ company, links, socials, light }) {
         component={Link}
         href={link.href}
         variant="body2"
-        color={light ? "white" : "dark"}
+        color="white"
         fontWeight="regular"
       >
         {link.name}
@@ -63,7 +63,7 @@ function CenteredFooter({ company, links, socials, light }) {
         component={Link}
         href={social.link}
         variant="body2"
-        color={light ? "white" : "dark"}
+        color="white"
         fontWeight="regular"
       >
         {social.icon}
@@ -91,7 +91,7 @@ function CenteredFooter({ company, links, socials, light }) {
           </Stack>
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
-          <MKTypography variant="body2" color={light ? "white" : "dark"}>
+          <MKTypography variant="body2" color="white">
             Copyright &copy; {year} Material by{" "}
             <MKTypography
               component={Link}
@@ -99,7 +99,7 @@ function CenteredFooter({ company, links, socials, light }) {
               target="_blank"
               rel="noreferrer"
               variant="body2"
-              color={light ? "white" : "dark"}
+              color="white"
             >
               {name}
             </MKTypography>
@@ -159,7 +159,6 @@ CenteredFooter.defaultProps = {
       link: "https://material-ui.com/store/items/otis-kit-pro-material-kit-react/",
     },
   ],
-  light: false,
 };
 
 // Typechecking props for the CenteredFooter
@@ -167,7 +166,6 @@ CenteredFooter.propTypes = {
   company: PropTypes.instanceOf(Object),
   links: PropTypes.instanceOf(Array),
   socials: PropTypes.instanceOf(Array),
-  light: PropTypes.bool,
 };
 
 export default CenteredFooter;

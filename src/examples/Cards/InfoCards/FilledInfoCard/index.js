@@ -44,19 +44,20 @@ function FilledInfoCard({ variant, color, icon, title, description, action }) {
     },
   };
 
-  let iconColor = color;
+  // let iconColor = color;
+  // const iconColor = "white";
 
-  if (variant === "gradient" && color !== "light") {
-    iconColor = "white";
-  } else if (variant === "gradient" && color === "light") {
-    iconColor = "dark";
+  if (variant === "gradient" && color !== "secondary") {
+    // iconColor = "white";
+  } else if (variant === "gradient" && color === "secondary") {
+    // iconColor = "dark";
   }
 
   return (
     <MKBox
       display={{ xs: "block", md: "flex" }}
       variant={variant}
-      bgColor={variant === "contained" ? "grey-100" : color}
+      bgColor="secondary"
       borderRadius="xl"
       pt={3.5}
       pb={3}
@@ -65,28 +66,17 @@ function FilledInfoCard({ variant, color, icon, title, description, action }) {
       <MKTypography
         display="block"
         variant="h3"
-        color={iconColor}
+        color="warning"
         textGradient={variant === "contained"}
         mt={-0.625}
       >
         {typeof icon === "string" ? <Icon>{icon}</Icon> : icon}
       </MKTypography>
       <MKBox pt={{ xs: 3, md: 0 }} pl={{ xs: 0, md: 2 }} lineHeight={1}>
-        <MKTypography
-          display="block"
-          variant="5"
-          color={variant === "contained" || color === "light" ? "dark" : "white"}
-          fontWeight="bold"
-          mb={1}
-        >
+        <MKTypography display="block" variant="5" color="white" fontWeight="bold" mb={1}>
           {title}
         </MKTypography>
-        <MKTypography
-          display="block"
-          variant="body2"
-          color={variant === "contained" || color === "light" ? "text" : "white"}
-          mb={2}
-        >
+        <MKTypography display="block" variant="body2" color="white" mb={2}>
           {description}
         </MKTypography>
         {action && action.type === "external" ? (
@@ -97,7 +87,7 @@ function FilledInfoCard({ variant, color, icon, title, description, action }) {
             rel="noreferrer"
             variant="body2"
             fontWeight="regular"
-            color={variant === "contained" ? color : "white"}
+            color="white"
             sx={buttonStyles}
           >
             {action.label} <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>

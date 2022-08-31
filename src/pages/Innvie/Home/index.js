@@ -14,11 +14,9 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-// import Card from "@mui/material/Card";
 
 // Otis Kit PRO components
 import MKBox from "components/MKBox";
-
 // Otis Kit PRO examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
@@ -35,13 +33,15 @@ import Map from "./components/Map/map";
 function Reservation() {
   return (
     <>
-      <DefaultNavbar routes={routes} sticky />
+      <MKBox bgColor="white" shadow="sm" py={0.25}>
+        <DefaultNavbar routes={routes} transparent relative />
+      </MKBox>
       <Header />
       <Offers
         cards={[
           {
-            variant: "contained",
-            color: "primary",
+            variant: "gradient",
+            color: "pink",
             icon: "shuffle_on",
             title: "Oferta 1",
             description:
@@ -49,14 +49,14 @@ function Reservation() {
           },
           {
             variant: "gradient",
-            color: "primary",
+            color: "pink",
             icon: "beenhere",
             title: "Oferta 2",
             description:
               "The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.",
           },
           {
-            variant: "contained",
+            variant: "gradient",
             color: "primary",
             icon: "ballot",
             title: "Oferta 3",
@@ -66,21 +66,9 @@ function Reservation() {
         ]}
       />
       <Map />
-
-      {/* <Card
-        sx={{
-          p: 2,
-          mx: { xs: 2, lg: 3 },
-          mb: 4,
-          backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
-          backdropFilter: "saturate(200%) blur(30px)",
-          boxShadow: ({ boxShadows: { xxl } }) => xxl,
-        }}
-      > */}
       <Places />
       <Contact />
-      {/* </Card> */}
-      <MKBox pt={6} px={1} mt={6}>
+      <MKBox pt={6} px={1} mt={6} sx={{ backgroundColor: "#727273" }}>
         <CenteredFooter content={footerRoutes} />
       </MKBox>
     </>

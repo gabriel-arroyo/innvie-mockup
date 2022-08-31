@@ -45,7 +45,7 @@ function RaisedBlogCard({ image, title, description, action }) {
   };
 
   return (
-    <Card sx={{ flexGrow: 1 }}>
+    <Card sx={{ flexGrow: 1, backgroundColor: "#2c8ea2" }}>
       <MKBox position="relative" borderRadius="lg" mx={2} mt={-3}>
         <MKBox
           component="img"
@@ -74,11 +74,11 @@ function RaisedBlogCard({ image, title, description, action }) {
         />
       </MKBox>
       <MKBox p={3} mt={-2}>
-        <MKTypography display="inline" variant="h4" textTransform="capitalize">
+        <MKTypography display="inline" variant="h4" textTransform="capitalize" color="white">
           {title}
         </MKTypography>
         <MKBox mt={1} mb={3}>
-          <MKTypography variant="body2" component="p" color="text">
+          <MKTypography variant="body2" component="p" color="white">
             {description}
           </MKTypography>
         </MKBox>
