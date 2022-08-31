@@ -34,7 +34,7 @@ function Reservation() {
   return (
     <>
       <MKBox bgColor="white" shadow="sm" py={0.25}>
-        <DefaultNavbar routes={routes} transparent relative />
+        <DefaultNavbar routes={routes} transparent relative sticky />
       </MKBox>
       <Header />
       <Offers

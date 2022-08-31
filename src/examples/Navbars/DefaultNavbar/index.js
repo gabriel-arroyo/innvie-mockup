@@ -480,7 +480,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
               component="img"
               src={logoUrl}
               alt="logo"
-              width="120px"
+              width="170px"
               position="absolute"
               zIndex={1}
               sx={{ top: "8px" }}
@@ -559,7 +559,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
 DefaultNavbar.defaultProps = {
   brand: "Innvie",
   logoUrl:
-    "https://firebasestorage.googleapis.com/v0/b/innvie-6e09a.appspot.com/o/logo-azul2.png?alt=media&token=ee82dd54-5511-4ed2-a40c-78470541385a",
+    "https://firebasestorage.googleapis.com/v0/b/innvie-6e09a.appspot.com/o/logo-azul-fondo.png?alt=media&token=2fb98dc5-e86d-48d6-be7a-a7b0efecefc6",
   transparent: false,
   light: false,
   action: false,
